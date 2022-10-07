@@ -1,0 +1,20 @@
+@import '../variables.scss';
+
+:root {
+  ion-popover.select-popover {
+    --max-height: 300px;
+  }
+
+  .alert-wrapper {
+    min-width: 400px;
+  }
+
+  .popover-content {
+    border-radius: $paddingHalf;
+    --min-width: 300px;
+  }
+
+  .modal-wrapper {
+    border-radius: $paddingHalf;
+  }
+}

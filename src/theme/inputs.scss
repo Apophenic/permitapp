@@ -1,0 +1,13 @@
+@import 'display.scss';
+@import 'variables.scss';
+
+.boxed-input {
+  border: $border;
+  border-radius: $paddingHalf;
+}
+
+typeahead, uploader { width: 100%; }
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: $dark;
+}

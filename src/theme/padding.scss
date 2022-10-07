@@ -1,0 +1,151 @@
+@import "variables.scss";
+
+.no-pad { --padding-start: 0; --padding-end: 0; --padding-top: 0; --padding-bottom: 0; padding: 0; }
+.pad-top {--padding-top: $padding; padding-top: $padding; }
+.pad-bottom { --padding-bottom: $padding; padding-bottom: $padding; }
+.pad-left {--padding-start: $padding; padding-left: $padding; }
+.pad-right {--padding-end: $padding; padding-right: $padding; }
+.pad-x { @extend .pad-left; @extend .pad-right; }
+.pad-y { @extend .pad-top; @extend .pad-bottom; }
+.pad { @extend .pad-x; @extend .pad-y; }
+.padding-double-top { padding-top: 2 * $padding; }
+.padding-double-left { padding-left: 2 * $padding; }
+
+.pad-half-top { padding-top: $paddingHalf; --padding-top: $paddingHalf; }
+.pad-half-bottom { padding-bottom: $paddingHalf; --padding-bottom: $paddingHalf; }
+.pad-half-left { padding-left: $paddingHalf; --padding-start: $paddingHalf; }
+.pad-half-right { padding-right: $paddingHalf; --padding-end: $paddingHalf; }
+.pad-half-x { @extend .pad-half-left; @extend .pad-half-right; }
+.pad-half-y { @extend .pad-half-top; @extend .pad-half-bottom; }
+.pad-half { @extend .pad-half-x; @extend .pad-half-y; }
+.pad-4 { padding: 4px }
+.pad-left-2 { padding-left: 2px; }
+.pad-left-4 { padding-left: 4px; }
+.pad-right-4 { padding-right: 4px; }
+.pad-top-2 { padding-top: 2px; }
+.pad-top-4 { padding-top: 4px; }
+.pad-top-6 { padding-top: 6px; }
+.pad-top-10 { padding-top: 12px; }
+.pad-top-12 { padding-top: 12px; }
+.pad-top-14 { padding-top: 14px; }
+.pad-top-20 { padding-top: 20px; }
+.pad-top-24 { padding-top: 24px; }
+.pad-top-28 { padding-top: 28px; }
+.pad-bottom-4 { padding-bottom: 4px; }
+
+
+
+.no-margin { --margin-start: 0; --margin-end: 0; --margin-top: 0; --margin-bottom: 0; margin: 0; }
+.margin-top { --margin-top: $padding; margin-top: $padding; }
+.margin-bottom { --margin-bottom: $padding; margin-bottom: $padding; }
+.margin-left { --margin-start: $padding; margin-left: $padding; }
+.margin-right { --margin-end: $padding; margin-right: $padding; }
+.margin-x { @extend .margin-left; @extend .margin-right; }
+.margin-y { @extend .margin-top; @extend .margin-bottom; }
+.margin { @extend .margin-x; @extend .margin-y; }
+
+.margin-half-top { margin-top: $paddingHalf; --margin-top: $paddingHalf; }
+.margin-half-bottom { margin-bottom: $paddingHalf; --margin-bottom: $paddingHalf; }
+.margin-half-left { margin-left: $paddingHalf; --margin-start: $paddingHalf; }
+.margin-half-right { margin-right: $paddingHalf; --margin-end: $paddingHalf; }
+.margin-half-x { @extend .margin-half-left; @extend .margin-half-right; }
+.margin-half-y { @extend .margin-half-top; @extend .margin-half-bottom; }
+.margin-half { @extend .margin-half-x; @extend .margin-half-y; }
+
+.neg-margin-top { margin-top: -1 * $padding; }
+.margin-top-4 { margin-top: 4px; }
+.margin-top-12 { margin-top: 12px; }
+.margin-right-2 { margin-right: 2px; }
+.margin-right-4 { margin-right: 4px; }
+.margin-left-4 { margin-left: 4px; }
+.margin-left-12 { margin-left: 12px; }
+.margin-left-double { margin-left: 2 * $padding; }
+.neg-margin-left { margin-left: -1 * $padding; }
+.neg-margin-half-left { margin-left: -1 * $paddingHalf; }
+.neg-margin-top-4 { margin-top: -4px; }
+.neg-margin-top-8 { margin-top: -8px; }
+.margin-bottom-2 { margin-bottom: 2px; }
+.margin-bottom-4 { margin-bottom: 4px; }
+
+@media (max-width: $sm) {
+  .pad-top-xs { padding-top: $padding; }
+  .pad-half-top-xs { padding-top: $paddingHalf; }
+}
+
+@media(max-width: $md) {
+  .pad-top-sm { padding-top: $padding; }
+}
+
+@media(min-width: $md) {
+  .pad-left-md { padding-left: $padding; }
+}
+
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .pad {
+    padding-left: unset;
+    padding-right: unset;
+    -webkit-padding-start: $padding;
+    padding-inline-start: $padding;
+    -webkit-padding-end: $padding;
+    padding-inline-end: $padding;
+  }
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .pad-left {
+    padding-left: unset;
+    -webkit-padding-start: $padding;
+    padding-inline-start: $padding;
+  }
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .pad-right {
+    padding-right: unset;
+    -webkit-padding-end: $padding;
+    padding-inline-end: $padding;
+  }
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .pad-x {
+    padding-left: unset;
+    padding-right: unset;
+    -webkit-padding-start: $padding;
+    padding-inline-start: $padding;
+    -webkit-padding-end: $padding;
+    padding-inline-end: $padding;
+  }
+}
+
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .margin {
+    margin-left: unset;
+    margin-right: unset;
+    -webkit-margin-start: $padding;
+    margin-inline-start: $padding;
+    -webkit-margin-end: $padding;
+    margin-inline-end: $padding;
+  }
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .margin-left {
+    margin-left: unset;
+    -webkit-margin-start: $padding;
+    margin-inline-start: $padding;
+  }
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .margin-right {
+    margin-right: unset;
+    -webkit-margin-end: $padding;
+    margin-inline-end: $padding;
+  }
+}
+@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+  .margin-x {
+    margin-left: unset;
+    margin-right: unset;
+    -webkit-margin-start: $padding;
+    margin-inline-start: $padding;
+    -webkit-margin-end: $padding;
+    margin-inline-end: $padding;
+  }
+}

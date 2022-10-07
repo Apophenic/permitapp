@@ -1,0 +1,77 @@
+@import 'variables.scss';
+
+a {
+  color: $primary;
+  cursor: pointer;
+}
+
+.draggable { cursor: grabbing; }
+.clickable { cursor: pointer; }
+
+$border: 1px solid $dark;
+.border-bottom { border-bottom: $border; }
+.border-left { border-left: $border; }
+.border-right { border-right: $border; }
+.border-top { border-top: $border; }
+.border { @extend .border-bottom; @extend .border-left; @extend .border-right; @extend .border-top }
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: $lg) {
+  .center-page-content {
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+@media (max-width: $lg) {
+  .center-page-content {
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+.full-width { width: 100%; }
+.inline { display: inline; }
+.hide { display: none; }
+.flex { display: flex; }
+
+.align-center { align-items: center; }
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-wrap { white-space: normal !important; }
+.capitalize { text-transform: capitalize; }
+.break-line { white-space: pre-line; }
+
+.dimmed { opacity: .5 }
+.dark-background { background: $dark }
+
+@media(min-width: 0) {
+  .text-center-xs { text-align: center !important; }
+}
+
+@media(min-width: $md) {
+  .text-left-md { text-align: left !important; }
+  .border-left-md { border-left: $border; }
+}
+
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] { -moz-appearance: textfield; }

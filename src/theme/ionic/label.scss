@@ -1,0 +1,18 @@
+@import '../display.scss';
+@import '../font.scss';
+@import '../variables.scss';
+
+:root {
+  ion-label {
+    @extend .text-wrap;
+  }
+
+  ion-title {
+    @extend .medium;
+    font-weight: 400;
+  }
+
+  .label-stacked.sc-ion-label-md-h {
+    margin-bottom: $paddingHalf;
+  }
+}

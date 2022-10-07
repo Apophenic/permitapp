@@ -1,0 +1,40 @@
+:root {
+  --ion-font-family: "Inter";
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/font/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter Light";
+  src: url("./assets/font/Inter-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url("./assets/font/Inter-Bold.woff2") format("woff2");
+}
+
+.light { font-family: "Inter Light"; }
+.medium { font-family: "Inter"; }
+.heavy { font-family: "Inter Bold"; }
+.italic { font-style: italic }
+
+.xxs-font { font-size: 10px; }
+.xs-font { font-size: 12px; }
+.sm-font { font-size: 14px; }
+.md-font { font-size: 16px; }
+.lg-font { font-size: 17px; }
+.xl-font { font-size: 24px; }
+.xxl-font { font-size: 26px; }
+.xxxl-font { font-size: 32px }
+.font-15 { font-size: 15px; }
+.font-13 { font-size: 13px; }
+
+h1, h2, h3, h4, h5, h6 {
+  @extend .heavy;
+  @extend .lg-font;
+  margin: 0;
+}

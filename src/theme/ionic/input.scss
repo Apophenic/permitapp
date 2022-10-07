@@ -1,0 +1,40 @@
+@import '../inputs.scss';
+@import '../variables.scss';
+
+:root {
+  ion-input, ion-textarea,
+  .item-label-stacked .sc-ion-input-md-h,
+  .item-label-stacked .sc-ion-textarea-md-h {
+    @extend .boxed-input;
+    caret-color: $light;
+    color: $light;
+    font-size: 14px;
+    --padding-start: 12px !important;
+    --padding-top: 12px;
+    --padding-end: 12px !important;
+    --padding-bottom: 12px;
+  }
+
+  ion-select {
+    @extend .boxed-input;
+    font-size: 14px;
+    --padding-start: 12px;
+    --padding-top: 11px;
+    --padding-end: 12px;
+    --padding-bottom: 11px;
+  }
+
+  .sc-ion-textarea-md, .sc-ion-textarea-md-h {
+    min-height: 40px;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .sc-ion-alert-md {
+    color: $light !important;
+  }
+
+  ion-select::part(text), ion-select::part(icon) {
+    color: $light;
+  }
+}

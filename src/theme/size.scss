@@ -1,0 +1,63 @@
+@import 'variables.scss';
+
+.size-12 { height: 12px; width: 12px; }
+.size-14 { height: 14px; width: 14px; }
+.size-16 { height: 16px; width: 16px; }
+.size-18 { height: 18px; width: 18px; }
+.size-20 { height: 20px; width: 20px; }
+.size-22 { height: 22px; width: 22px; }
+.size-24 { height: 24px; width: 24px; }
+.size-32 { height: 32px; width: 32px; }
+.size-38 { height: 38px; width: 38px; }
+.size-48 { height: 48px; width: 48px; }
+.size-56 { height: 56px; width: 56px; }
+.size-64 { height: 64px; width: 64px; }
+.size-72 { height: 72px; width: 72px; }
+.size-96 { height: 96px; width: 96px; }
+.size-128 { height: 128px; width: 128px; }
+
+@media (min-width: $lg) {
+
+  .min-width-330 { --min-width: 330px; }
+  .min-width-450 { --min-width: 450px; }
+  .min-width-600 { --min-width: 600px; }
+  .min-width-750 { --min-width: 750px; }
+  .min-width-950 { --min-width: 950px; }
+
+  .m250x550 {
+    --height: 250px;
+    --width: 550px;
+  }
+
+  .m540x450 {
+    --height: 540px;
+    --width: 450px;
+  }
+
+  .m450x550 {
+    --height: 450px;
+    --width: 550px;
+  }
+
+  .m550x650 {
+    --height: 650px;
+    --width: 550px;
+  }
+
+  .m950x650 {
+    --height: 650px;
+    --width: 950px;
+  }
+}
+
+@media (min-width: $md) and (max-width: $lg) {
+  .m950x650 {
+    --height: 650px;
+    --width: 800px;
+  }
+}
+
+.m350x420 {
+  --height: 350px;
+  --width: 420px;
+}

@@ -1,0 +1,45 @@
+@import '../variables.scss';
+
+:root {
+  ion-item {
+    --border-width: 0;
+    --inner-border-width: 0;
+    --highlight-color-valid: transparent;
+    --highlight-color-invalid: transparent;
+    --highlight-color-focused: transparent;
+    --padding-start: 0;
+    --inner-padding-start: 0;
+    --inner-padding-end: 0;
+    --padding-end: 0;
+    border-radius: 4px;
+  }
+
+  ion-item.item-select {
+    &:hover {
+      --background-hover-opacity: 0;
+    }
+  }
+
+  ion-item.item, ion-item.select-interface-option {
+    --inner-padding-start: 8px;
+    --inner-padding-end: 8px;
+    --inner-padding-top: 4px;
+    --inner-padding-bottom: 4px;
+
+    &:hover {
+      --background-hover-opacity: 2%;
+    }
+  }
+
+  ion-list {
+    padding: 0 !important;
+  }
+
+  ion-list-header {
+    padding: 0 !important;
+  }
+
+  li {
+    color: $light;
+  }
+}
